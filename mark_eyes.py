@@ -45,11 +45,11 @@ for i, img_file in enumerate(images):
 
 plt.draw()
 res = []
-t = threading.Thread(target=prompt_eye_locations, args=(res, images))
-t.setDaemon(True)
-t.start()
+# t = threading.Thread(target=prompt_eye_locations, args=(res, images))
+# t.setDaemon(True)
+# t.start()
 plt.show()
-t.join()
+# t.join()
 
 
 
