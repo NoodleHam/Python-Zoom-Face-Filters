@@ -1,44 +1,20 @@
-# Facial-landmark-detection
-### Face Detection
+### 1. Facial Landmark Detection
+Run `python3 1-facial-landmark-original.py` to visualize facial landmarks using functions provided by OpenCV.
+Press "q" to exit. (Credit to [Daniel Otulagun](https://github.com/Danotsonof/){:target="_blank"})
 
-This detects faces and facial landmarks on an image, the image can be access via a url or in local directory.
+### 2. Segmenting the Landmarks
+Run `python3 2-facial-landmark-segmentation.py` to visualize facial landmarks with contours around each region.
+(Credit to [Adrian Rosebrock](https://github.com/jrosebr1){:target="_blank"})
 
-A python file to detect facial landmarks via webcam.
-A jupyter notebook to detect image files located in directory. 
+### 3. Detecting Gaze
+I hand-made a convolutional filter to detect the location of the pupil in an eye. To visualize
+the feature maps and the estimated pupil location, run\
+`python3 4-visualize-gaze.py`
 
-This project uses Python 3.7 and openCV 4.1.2
+### 4. Animating the Eyes
+With this information, we can animate a set of cartoon eyes to look in the direction
+you're looking. This is the final product. To see this, run
+`python3 codesss/5-cartoon-eyes.py`.
 
-The model used for landmark detection can be got from: 
-https://github.com/kurnianggoro/GSOC2017/raw/master/data/lbfmodel.yaml
-
-Also the model used for face detection can be found here:
-https://raw.githubusercontent.com/opencv/opencv/master/data/haarcascades/haarcascade_frontalface_alt2.xml
-
-
-## Landmark Detection on Webcam
-
-![Landmark Detection](face-detect.jpg)
-<br>Picture on phone placed in front of webcam
-
-## Result Samples
-
-![Face Detection](face-detection.jpg)
-
-#### Landmark Detection
-
-![Face Landmark Detection - 3](3-landmark-detections.jpg)
-
-![Landmark Detection](zoomed-in1.jpg)
-
-![Landmark Detection](zoomed-in2.jpg)
-
-![Landmark Detection](zoomed-in3.jpg)
-
-
-
-### Credits
-
-https://github.com/albertofernandezvillan
-<br>https://github.com/kurnianggoro/GSOC2017
-<br>https://github.com/sacchitchadha
-<br>https://github.com/tensorflowlagos
+To see the demo outputs of each script, visit Tech@NYU's Events page at
+[https://events.techatnyu.org/past-events/diy-zoom-filters-0324](https://events.techatnyu.org/past-events/diy-zoom-filters-0324){:target="_blank"}.
